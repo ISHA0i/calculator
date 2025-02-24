@@ -2,30 +2,66 @@ html,
 body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    font-family: 'Arial', sans-serif; /* Updated font for a modern look */
+    background-color: #f0f0f0; /* Light grey background for the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.calculator {
+    background-color: #ffffff; /* White background for the calculator */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 400px;
+    width: 100%;
+}
+
 
 .button {
-    padding: 20px;
-    margin: 0 3px;
-    border: 2px solid black;
-    border-radius: 9px;
+    padding: 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
-    width: 66px;
+    width: 70px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    transition: background-color 0.3s;
 }
-.zero{
-    width: 119px;
+.button.zero {
+    width: 145px;
+}
+/* Hover effect for buttons */
+.button:hover {
+    background-color: #d5d5d5;
 }
 
+/* Operator buttons with distinct color */
+.button.operator {
+    background-color: #ff9500;
+    color: white;
+}
+
+/* Hover effect for operator buttons */
+.button.operator:hover {
+    background-color: #e08a00;
+}
 .row {
+    display: flex;
+    justify-content: space-between;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin: 8px 0px;
+    margin-bottom: 10px;
 }
 
 .input {
-    font-size: 20px;
-    margin: 0;
-    padding: 10px 0px;
-    border: 2px solid black;
+    font-size: 24px;
+    padding: 15px;
+    border: 2px solid #cccccc;
     border-radius: 5px;
-    width: 291px;
+    width: calc(100% - 34px); /* Adjusted for padding and border */
+    margin-bottom: 20px;
+    text-align: right;
+    background-color: #f9f9f9;
 }
